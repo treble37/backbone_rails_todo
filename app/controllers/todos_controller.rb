@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: todos
+#
+#  id          :integer          not null, primary key
+#  description :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class TodosController < ApplicationController
   before_action :set_todo, only: [:show, :edit, :update, :destroy]
   respond_to :html, :json
