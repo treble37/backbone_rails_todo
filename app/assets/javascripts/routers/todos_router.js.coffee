@@ -1,10 +1,12 @@
-class BackboneRailsTodo.Router.TodosRouter extends Backbone.Router
+class BackboneRailsTodo.Routers.TodosRouter extends Backbone.Router
   routes:
-    '': 'viewTodoList'
-    'todos/(:id)': 'viewTodo'
+    'tasks': 'viewTodoList'
+    'tasks/(:id)': 'viewTodo'
 
-  viewTodoList:
-    new TodosIndexView()
+  viewTodoList: ->
+    console.log('viewTodoList')
+    view = new BackboneRailsTodo.Views.TodosIndexView
+    $('body').html(view.render().el)
 
-  viewTodo:
+  viewTodo: ->
     console.log('--')

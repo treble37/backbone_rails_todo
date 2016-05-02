@@ -3,11 +3,10 @@ window.BackboneRailsTodo =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+
+  init: ->
+    new BackboneRailsTodo.Routers.TodosRouter
+    Backbone.history.start()
 
 $(document).ready ->
-  #Router = Backbone.Router.extend({})
-  #BackboneRailsTodo.router = new Router()
-  console.log($('#todos'))
-  new BackboneRailsTodo.Routers.TodosRouter()
-  BackboneRailsTodo.initialize()
+  BackboneRailsTodo.init()

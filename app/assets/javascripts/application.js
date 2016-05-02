@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require hamlcoffee
 
 //= require underscore
 //= require backbone
-//= require haml_coffee
 //= require backbone_rails_todo
 //= require_tree ../templates
 //= require_tree ./models

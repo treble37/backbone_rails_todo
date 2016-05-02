@@ -1,7 +1,7 @@
 class BackboneRailsTodo.Views.TodoView extends Backbone.View
   template: JST['todo']
 
-  el: "#todo"
+  el: "#todos"
 
   render: =>
     $(@el).append @template(@model.toJSON())
